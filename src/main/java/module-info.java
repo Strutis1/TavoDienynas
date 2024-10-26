@@ -3,7 +3,10 @@ module com.crew.mif.dienynas {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires jdk.jfr;
 
     opens com.crew.mif.dienynas to javafx.fxml;
     exports com.crew.mif.dienynas;
+    exports Data;
+    opens Data to javafx.fxml;
 }
