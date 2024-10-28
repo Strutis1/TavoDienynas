@@ -1,4 +1,4 @@
-package com.crew.mif.dienynas;
+package helper;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -49,7 +49,9 @@ public class Utility {
     }
 
     public static void populateComboBox(int count, ComboBox<Integer> comboBox) {
-        comboBox.getItems().clear();
+        if(comboBox != null)
+            comboBox.getItems().clear();
+
         ObservableList<Integer> items = FXCollections.observableArrayList();
         for (int i = 1; i <= count; ++i) {
             items.add(i);
@@ -59,7 +61,10 @@ public class Utility {
 
 
     public static void populateComboBox(ComboBox<String> comboBox, ObservableList<String> items) {
-        comboBox.getItems().clear();
+        if(comboBox != null) {
+            comboBox.getItems().clear();
+        }
         comboBox.setItems(items);
     }
+
 }

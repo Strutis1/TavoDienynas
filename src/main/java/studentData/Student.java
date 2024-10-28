@@ -1,15 +1,16 @@
-package Data;
+package studentData;
 
 public class Student {
-    private int id;
-    private float grade;
+    private String id;
+    private double grade;
     private String currentClass;
     private String name;
-    private Group group;
+    private String group;
     private boolean attendance;
 
+    public Student(){}
 
-    public Student(int id, float grade, String currentClass, String name, Group group, boolean attendance) {
+    public Student(String id, double grade, String currentClass, String name, String group, boolean attendance) {
         this.id = id;
         this.grade = grade;
         this.currentClass = currentClass;
@@ -18,19 +19,19 @@ public class Student {
         this.attendance = attendance;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public float getGrade() {
+    public double getGrade() {
         return grade;
     }
 
-    public void setGrade(float grade) {
+    public void setGrade(double grade) {
         this.grade = grade;
     }
 
@@ -42,7 +43,7 @@ public class Student {
         this.currentClass = currentClass;
     }
 
-    public boolean isAttendance() {
+    public boolean getAttendance() {
         return attendance;
     }
 
@@ -50,11 +51,11 @@ public class Student {
         this.attendance = attendance;
     }
 
-    public Group getGroup() {
+    public String getGroup() {
         return group;
     }
 
-    public void setGroup(Group group) {
+    public void setGroup(String group) {
         this.group = group;
     }
 

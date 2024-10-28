@@ -1,4 +1,4 @@
-package Data;
+package studentData;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,18 +19,14 @@ public class StudentTable {
                            TableColumn<Student, Boolean> studentAttendance) {
         this.dataTable = dataTable;
 
-        studentID.setCellValueFactory(new PropertyValueFactory<>("studentID"));
+        studentID.setCellValueFactory(new PropertyValueFactory<>("id"));
         currentClass.setCellValueFactory(new PropertyValueFactory<>("currentClass"));
-        studentName.setCellValueFactory(new PropertyValueFactory<>("studentName"));
-        studentGroup.setCellValueFactory(new PropertyValueFactory<>("studentGroup"));
-        studentGrade.setCellValueFactory(new PropertyValueFactory<>("studentGrade"));
-        studentAttendance.setCellValueFactory(new PropertyValueFactory<>("studentAttendance"));
+        studentName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        studentGroup.setCellValueFactory(new PropertyValueFactory<>("group"));
+        studentGrade.setCellValueFactory(new PropertyValueFactory<>("grade"));
+        studentAttendance.setCellValueFactory(new PropertyValueFactory<>("attendance"));
 
         dataTable.setItems(tableData);
-    }
-
-    public StudentTable(TableView<Student> dataTable, TableColumn<Student, String> studentID, TableColumn<Student, String> studentClass, TableColumn<Student, String> studentName, TableColumn<Student, Double> studentGrade, TableColumn<Student, Boolean> studentAttendance) {
-        this.dataTable = dataTable;
     }
 
 //    public void filterByMonthRange(int fromMonth, int toMonth) {
@@ -45,6 +41,24 @@ public class StudentTable {
 //        dataTable.refresh();
 //
 //    }
+
+    public void filterTable(Filter filter, String wantedValue) {
+        ObservableList<Student> filteredList = FXCollections.observableArrayList();
+        for (Student student : tableData){
+            if(filter.match(student,wantedValue)){
+                filteredList.add(student);
+            }
+        }
+        dataTable.setItems(filteredList);
+    }
+
+    public void toOriginal(){
+        dataTable.setItems(tableData);
+    }
+
+    public TableView<Student> getDataTable() {
+        return dataTable;
+    }
 
     public void clearTable() {
         tableData.clear();
@@ -63,8 +77,8 @@ public class StudentTable {
         dataTable.setVisible(visible);
     }
 
-    public void addPayment(Student mokejimas) {
-        tableData.add(mokejimas);
+    public void addStudent(Student student) {
+        tableData.add(student);
         dataTable.refresh();
     }
 }

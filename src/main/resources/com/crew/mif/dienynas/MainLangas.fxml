@@ -5,9 +5,10 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -19,11 +20,11 @@
       <VBox layoutX="27.0" layoutY="90.0" prefHeight="86.0" prefWidth="254.0" style="-fx-alignment: top_center;">
          <children>
             <ComboBox fx:id="filterChoice" prefHeight="30.0" prefWidth="254.4" promptText="Search by" style="-fx-background-color: peachpuff;" />
-            <TextField fx:id="searchText" prefHeight="26.0" prefWidth="255.0" style="-fx-background-color: peachpuff; -fx-alignment: center;">
+            <ComboBox fx:id="filteredChoice" disable="true" prefHeight="28.0" prefWidth="325.0" promptText="Select" style="-fx-background-color: peachpuff;" visible="false">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
-            </TextField>
+            </ComboBox>
          </children>
       </VBox>
       <VBox layoutX="339.0" layoutY="90.0" prefHeight="86.0" prefWidth="254.4" style="-fx-alignment: top_right;">
@@ -41,14 +42,14 @@
             </Button>
          </children>
       </HBox>
-      <TableView fx:id="studentTable" editable="true" layoutX="27.0" layoutY="186.0" prefHeight="332.0" prefWidth="566.4" style="-fx-background-color: peachpuff;">
+      <TableView fx:id="dataTable" editable="true" layoutX="27.0" layoutY="186.0" prefHeight="332.0" prefWidth="566.4" style="-fx-background-color: peachpuff;">
         <columns>
             <TableColumn fx:id="studentID" prefWidth="100.0" text="Student ID" />
             <TableColumn fx:id="studentClass" prefWidth="60.0" text="Class" />
-          <TableColumn fx:id="studentName" prefWidth="135.20001220703125" text="Students name" />
-          <TableColumn fx:id="studentGroup" prefWidth="93.5999755859375" text="Group" />
+          <TableColumn fx:id="studentName" prefWidth="113.5999755859375" text="Students name" />
+          <TableColumn fx:id="studentGroup" prefWidth="116.00006103515625" text="Group" />
             <TableColumn fx:id="studentGrade" prefWidth="75.20001220703125" text="Grade" />
-            <TableColumn fx:id="studentAttendance" prefWidth="168.79998779296875" text="Attendance" />
+            <TableColumn fx:id="studentAttendance" prefWidth="99.99997558593748" text="Attendance" />
         </columns>
       </TableView>
       <HBox layoutX="27.0" layoutY="508.0" prefHeight="72.0" prefWidth="200.0" style="-fx-alignment: center;">
@@ -56,7 +57,7 @@
             <Button fx:id="addButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: peachpuff;" text="Add group" />
          </children>
       </HBox>
-      <BorderPane prefHeight="72.0" prefWidth="774.0" style="-fx-background-color: sandybrown;">
+      <BorderPane prefHeight="72.0" prefWidth="774.0" style="-fx-background-color: sandybrown;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="0.0">
          <center>
             <Label text="Tavo Dienynas" BorderPane.alignment="CENTER">
                <font>
@@ -65,5 +66,15 @@
             </Label>
          </center>
       </BorderPane>
+      <VBox layoutX="684.0" layoutY="395.0" prefHeight="113.0" prefWidth="90.0" style="-fx-alignment: bottom_center;">
+         <children>
+            <RadioButton fx:id="pdfChosen" disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="87.0" style=".dot { -fx-background-color: peachpuff; }" text="PDF" toggleGroup="$ExportOptions">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ExportOptions" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="csvChosen" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" style=".dot { -fx-background-color: peachpuff; }" text="CSV" toggleGroup="$ExportOptions" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
