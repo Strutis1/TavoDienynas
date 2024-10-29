@@ -2,7 +2,7 @@ package studentData;
 
 public class Student {
     private String id;
-    private double grade;
+    private int grade;
     private String currentClass;
     private String name;
     private String group;
@@ -10,7 +10,7 @@ public class Student {
 
     public Student(){}
 
-    public Student(String id, double grade, String currentClass, String name, String group, boolean attendance) {
+    public Student(String id, int grade, String currentClass, String name, String group, boolean attendance) {
         this.id = id;
         this.grade = grade;
         this.currentClass = currentClass;
@@ -27,12 +27,13 @@ public class Student {
         this.id = id;
     }
 
-    public double getGrade() {
+    public int getGrade() {
         return grade;
     }
 
-    public void setGrade(double grade) {
-        this.grade = grade;
+    public void setGrade(int grade) {
+        if(grade >= 0 && grade <= 10)
+            this.grade = grade;
     }
 
     public String getCurrentClass() {

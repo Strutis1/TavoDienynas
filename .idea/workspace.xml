@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab3767f-3593-4c17-82b0-cf59640de33a" name="Changes" comment="added staring components and classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/CSVExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/ExportFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/Exporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/ExporterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/PDFExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/AttendanceFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/ClassFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/GradeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/GroupFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/IDFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/studentData/NameFilter.java" afterDir="false" />
+    <list default="true" id="7ab3767f-3593-4c17-82b0-cf59640de33a" name="Changes" comment="testing csv file for one day for now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Group.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentData/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/StudentTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentData/StudentTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student_Data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Student_Data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SaveLoad/Exporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SaveLoad/Exporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crew/mif/dienynas/DienynasApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crew/mif/dienynas/DienynasApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crew/mif/dienynas/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crew/mif/dienynas/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crew/mif/dienynas/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentData/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentData/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studentData/StudentTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studentData/StudentTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/crew/mif/dienynas/MainLangas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/crew/mif/dienynas/MainLangas.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +79,8 @@
       <workItem from="1729890191085" duration="8000" />
       <workItem from="1729956097674" duration="26067000" />
       <workItem from="1730126322374" duration="7151000" />
-      <workItem from="1730145187886" duration="2913000" />
+      <workItem from="1730145187886" duration="3247000" />
+      <workItem from="1730183390247" duration="9062000" />
     </task>
     <task id="LOCAL-00001" summary="added prototype GUI">
       <option name="closed" value="true" />
@@ -110,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729967558690</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added filtering by columns and chosen value">
+      <option name="closed" value="true" />
+      <created>1730148670259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148670259</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testing csv file for one day for now">
+      <option name="closed" value="true" />
+      <created>1730148723320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148723320</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +123,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added prototype GUI" />
     <MESSAGE value="added staring components and classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added staring components and classes" />
+    <MESSAGE value="added filtering by columns and chosen value" />
+    <MESSAGE value="testing csv file for one day for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing csv file for one day for now" />
   </component>
 </project>

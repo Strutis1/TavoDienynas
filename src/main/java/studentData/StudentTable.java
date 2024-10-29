@@ -15,7 +15,7 @@ public class StudentTable {
                            TableColumn<Student, String> currentClass,
                            TableColumn<Student, String> studentName,
                            TableColumn<Student, String> studentGroup,
-                           TableColumn<Student, Double> studentGrade,
+                           TableColumn<Student, Integer> studentGrade,
                            TableColumn<Student, Boolean> studentAttendance) {
         this.dataTable = dataTable;
 
@@ -52,8 +52,8 @@ public class StudentTable {
         dataTable.setItems(filteredList);
     }
 
-    public void toOriginal(){
-        dataTable.setItems(tableData);
+    public void refresh(){
+        dataTable.refresh();
     }
 
     public TableView<Student> getDataTable() {
@@ -77,8 +77,36 @@ public class StudentTable {
         dataTable.setVisible(visible);
     }
 
+    public Student searchByName(String name){
+        for(Student student : tableData){
+            if(student.getName().equals(name)) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public void markStudentAsAbsent(String name){
+        searchByName(name).setAttendance(false);
+        refresh();
+    }
+
+    public void markStudentAsPresent(String name){
+        searchByName(name).setAttendance(true);
+        refresh();
+    }
+
+    public void giveGrade(String name, int grade){
+        searchByName(name).setGrade(grade);
+        refresh();
+    }
+
     public void addStudent(Student student) {
         tableData.add(student);
         dataTable.refresh();
+    }
+
+    public void toOriginal() {
+        dataTable.setItems(tableData);
     }
 }
